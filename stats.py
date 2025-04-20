@@ -13,6 +13,13 @@ def get_num_chars_dict(book_text):
             chars_dict[char] = 1
     return chars_dict
 
+def sort_on(dict):
+    return dict["num"]
+
 def sort_chars_dict(chars_dict):
-    
-    return chars_dict.sort
+    dict_list = []
+    for key in chars_dict:
+        key_dict = {"char": key, "num": chars_dict[key]}
+        dict_list.append(key_dict)  
+    dict_list.sort(reverse=True, key=sort_on)
+    return dict_list

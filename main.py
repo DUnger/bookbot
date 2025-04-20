@@ -1,4 +1,4 @@
-from stats import get_num_words, get_num_chars_dict
+from stats import get_num_words, get_num_chars_dict, sort_chars_dict
 
 
 
@@ -12,6 +12,7 @@ def main():
     book_text = get_book_text(file_path)
     num_words = get_num_words(book_text)
     chars_dict = get_num_chars_dict(book_text)
+    sorted_chars_dict_list = sort_chars_dict(chars_dict)
     print(f"{num_words} words found in the document")
     print(chars_dict)
 
