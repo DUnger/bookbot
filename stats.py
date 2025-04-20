@@ -3,7 +3,7 @@ def get_num_words(book_text):
     num_words = len(text_list)
     return num_words
 
-def count_num_chars_dict(book_text):
+def get_num_chars_dict(book_text):
     chars_dict = {}
     for char_origin in book_text:
         char = char_origin.lower()
@@ -14,4 +14,5 @@ def count_num_chars_dict(book_text):
     return chars_dict
 
 def sort_chars_dict(chars_dict):
+    
     return chars_dict.sort
