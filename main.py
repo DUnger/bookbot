@@ -13,7 +13,17 @@ def main():
     num_words = get_num_words(book_text)
     chars_dict = get_num_chars_dict(book_text)
     sorted_chars_dict_list = sort_chars_dict(chars_dict)
-    print(f"{num_words} words found in the document")
-    print(chars_dict)
+
+    print("============ BOOKBOT ============")
+    print("Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {num_words} total words")
+    print("--------- Character Count -------")
+
+    for dict in sorted_chars_dict_list:
+        if dict["char"].isalpha():
+            print(f"{dict["char"]}: {dict["num"]}")
+    
+    print("============= END ===============")
 
 main()
